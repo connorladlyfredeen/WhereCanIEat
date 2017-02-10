@@ -5,9 +5,9 @@ Traditional rating sites will occasionally have reviews that state the good or b
 
 ## Before you start
 Ensure you have Python 2.x.x and Django installed. Once checked out, the application can be run with 
-'''
+```
 python manage.py runserver
-'''
+```
 This will start the development server on port 8000 locally.
 
 ## Design Decisions
