@@ -18,7 +18,7 @@ def city(request, city):
         reviews = Review.objects.filter(name=restaurant.name)
         final_list.append({"name": restaurant.name, "food_type": restaurant.food_type, "comments": reviews})
     print final_list
-    context = {'restaurant_list': final_list, 'city': city}
+    context = {'restaurant_list': restaurant_list, 'city': city}
     return render(request, 'reviews/restaurants.html', context)
 
 def add(request):
