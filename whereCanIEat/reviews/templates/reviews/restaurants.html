@@ -1,11 +1,10 @@
 
 <h2>{{city}}</h2>
 {% if restaurant_list %}
-    <ul>
     {% for r in restaurant_list %}
-        <li>{{ r }}</li>
+        <h3>{{r["name"]}}</h3>
+        <h4>{{r["food_type"]}}</h4>
     {% endfor %}
-    </ul>
 {% else %}
     <p>No restaurants near you:(</p>
 {% endif %}

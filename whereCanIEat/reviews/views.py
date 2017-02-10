@@ -5,7 +5,7 @@ from django.template import loader
 
 from django.http import HttpResponse
 
-from .models import Restaurant
+from .models import Restaurant, Review
 
 
 def index(request):
@@ -13,27 +13,13 @@ def index(request):
 
 def city(request, city):
     restaurant_list = Restaurant.objects.filter(city_name=city.capitalize())
-    str_list = map(str, restaurant_list)
-    context = {'restaurant_list': str_list, 'city': city}
+    final_list = []
+    for restaurant in restaurant_list:
+        reviews = Review.objects.filter(name=restaurant.name)
+        final_list.append({"name": restaurant.name, "food_type": restaurant.food_type, "comments": reviews})
+    print final_list
+    context = {'restaurant_list': final_list, 'city': city}
     return render(request, 'reviews/restaurants.html', context)
 
 def add(request):
     return render(request, 'reviews/add.html')
-
-def add(request):
-    restauant = get_object_or_404(Restaurant, pk=question_id)
-    try:
-        selected_choice = question.choice_set.get(pk=request.POST['choice'])
-    except (KeyError, Choice.DoesNotExist):
-        # Redisplay the question voting form.
-        return render(request, 'polls/detail.html', {
-            'question': question,
-            'error_message': "You didn't select a choice.",
-        })
-    else:
-        selected_choice.votes += 1
-        selected_choice.save()
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
-        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
