@@ -1,0 +1,9 @@
+<h1>Add a new restaurant</h1>
+<form action="{% url 'review:add' %}" method="post">
+  {% csrf_token %}
+  <input type="text" name="name" id="name" value="" />
+  <input type="text" name="city" id="city" value="" />
+  <input type="text" name="food_type" id="food_type" value="" />
+  <input type="text" name="review" id="review" value="" />
+  <input type="submit" value="Add" />
+</form>
