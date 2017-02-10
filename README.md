@@ -37,6 +37,7 @@ The ultimate goal would be to transfer this to MongoDB. This would require some 
 The code would also have to be adjusted in the settings.py and models.py files to use the MongoDB Django driver and to amalgamate the two models for comment and restaurant together.  (See here for documentation: https://django-mongodb-engine.readthedocs.io/en/latest/)
 
 ## Current Features
+New restaurants and comments can be added only from the admin page. The restaurants associated with a specific city can be accessed from /reviews/CITY_NAME.
 
 ## Challenges
 Timing was very tight for me on this project, so I had to decide what the most important features where that could be built in the given time. In the end, I decided that the most important thing to have was to be able to see which restaurants where reviewed near you based on searching for your city. This is the core of the service and therefore the most important piece to show its value.
