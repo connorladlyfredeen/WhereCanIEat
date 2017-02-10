@@ -43,10 +43,11 @@ Timing was very tight for me on this project, so I had to decide what the most i
 
 ## Future Features
 Beyond simple cosmetic improvements, these are the features that I would implement if I had unlimited time.
-```
-1. Web scraping and external apis to pull in existing reviews and data on restaurants as it relates to allergies.
-2. Improved search ability to enable users to search by their location not only city and to search byt food type, price range, star ranking, allergy accessibility ranking etc.
-3. Duplication and false data chacking using some sort of captcha or account feature
-4. Ability to let users flag bad reviews for moderation
-5. Build out pages for each restaurant
-```
+
+* Web scraping and external apis to pull in existing reviews and data on restaurants as it relates to allergies.
+* Improved search ability to enable users to search by their location not only by city
+   *search byt food type, price range, star ranking, allergy accessibility ranking etc.
+* Duplication and false data chacking using some sort of captcha or account feature
+* Ability to let users flag bad reviews for moderation
+* Build out pages for each restaurant
+
