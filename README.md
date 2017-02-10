@@ -46,7 +46,7 @@ Beyond simple cosmetic improvements, these are the features that I would impleme
 
 * Web scraping and external apis to pull in existing reviews and data on restaurants as it relates to allergies.
 * Improved search ability to enable users to search by their location not only by city
-   *search byt food type, price range, star ranking, allergy accessibility ranking etc.
+ * Search byt food type, price range, star ranking, allergy accessibility ranking etc.
 * Duplication and false data chacking using some sort of captcha or account feature
 * Ability to let users flag bad reviews for moderation
 * Build out pages for each restaurant
